@@ -28,8 +28,8 @@ texture_filter = 1
 position = Vector2(-8, -36)
 scale = Vector2(0.25, 0.25)
 sprite_frames = ExtResource("1_jqp8e")
-animation = &"correr"
-frame_progress = 0.5864967
+animation = &"saltar"
+frame_progress = 0.7303097
 
 [node name="Area2D" type="Area2D" parent="." unique_id=865146069]
 collision_layer = 0

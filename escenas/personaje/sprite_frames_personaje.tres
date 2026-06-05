@@ -26,13 +26,13 @@ region = Rect2(0, 0, 141, 176)
 atlas = ExtResource("1_40o7f")
 region = Rect2(0, 0, 141, 175)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wyttj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_40o7f"]
 atlas = ExtResource("1_40o7f")
-region = Rect2(0, 175, 141, 175)
+region = Rect2(0, 160, 141, 160)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vcfes"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe23b"]
 atlas = ExtResource("1_40o7f")
-region = Rect2(141, 175, 141, 175)
+region = Rect2(141, 160, 141, 160)
 
 [resource]
 animations = [{
@@ -66,10 +66,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wyttj")
+"texture": SubResource("AtlasTexture_40o7f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vcfes")
+"texture": SubResource("AtlasTexture_qe23b")
 }],
 "loop": true,
 "name": &"saltar",

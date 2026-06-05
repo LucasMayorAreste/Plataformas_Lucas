@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://wokgedb436jk"]
+[gd_scene format=3 uid="uid://wokgedb436jk"]
 
 [ext_resource type="PackedScene" uid="uid://bm7ynf8ht1xr8" path="res://escenas/nivel_1/nivel_1.tscn" id="1_pdctq"]
 [ext_resource type="Script" uid="uid://de3hna2y84jwe" path="res://escenas/escena_principal/escena_principal.gd" id="1_snxy5"]
@@ -9,24 +9,39 @@
 [ext_resource type="PackedScene" uid="uid://do05mkwxxx06b" path="res://escenas/contador_muertes/contador_muertes.tscn" id="6_px6n3"]
 [ext_resource type="Script" uid="uid://b1sdhesyweg0h" path="res://escenas/escena_principal/controlador_pausa.gd" id="8_e307b"]
 
-[node name="EscenaPrincipal" type="Node2D" node_paths=PackedStringArray("controlador_partida")]
+[sub_resource type="Gradient" id="Gradient_e307b"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_asb8d"]
+gradient = SubResource("Gradient_e307b")
+
+[sub_resource type="Gradient" id="Gradient_ictn0"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pt7cf"]
+gradient = SubResource("Gradient_ictn0")
+
+[sub_resource type="Gradient" id="Gradient_asb8d"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ictn0"]
+gradient = SubResource("Gradient_asb8d")
+
+[node name="EscenaPrincipal" type="Node2D" unique_id=511570559 node_paths=PackedStringArray("controlador_partida")]
 script = ExtResource("1_snxy5")
 niveles = Array[PackedScene]([ExtResource("1_pdctq"), ExtResource("3_yoxmf"), ExtResource("2_sbgap")])
 controlador_partida = NodePath("ControladorPartida")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1621952414]
 zoom = Vector2(2.465, 2.465)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=553576217]
 stream = ExtResource("5_y7kll")
 autoplay = true
 bus = &"Musica"
 
-[node name="ControladorPartida" parent="." instance=ExtResource("6_e307b")]
+[node name="ControladorPartida" parent="." unique_id=565330830 instance=ExtResource("6_e307b")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=964295005]
 
-[node name="ContadorMuertes" parent="CanvasLayer" instance=ExtResource("6_px6n3")]
+[node name="ContadorMuertes" parent="CanvasLayer" unique_id=513663126 instance=ExtResource("6_px6n3")]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -36,6 +51,24 @@ offset_right = 0.0
 offset_bottom = 16.825
 grow_vertical = 1
 
-[node name="ControladorPausa" type="Node" parent="."]
+[node name="TouchScreenButtonSaltar" type="TouchScreenButton" parent="CanvasLayer" unique_id=1445776598]
+modulate = Color(1, 1, 1, 0.23529412)
+position = Vector2(1032, 525)
+texture_normal = SubResource("GradientTexture2D_asb8d")
+action = "saltar"
+
+[node name="TouchScreenButtonDerecha" type="TouchScreenButton" parent="CanvasLayer" unique_id=1283991284]
+modulate = Color(1, 1, 1, 0.23529412)
+position = Vector2(155, 525)
+texture_normal = SubResource("GradientTexture2D_pt7cf")
+action = "derecha"
+
+[node name="TouchScreenButtonIzquierda" type="TouchScreenButton" parent="CanvasLayer" unique_id=76668635]
+modulate = Color(1, 1, 1, 0.23529412)
+position = Vector2(29, 525)
+texture_normal = SubResource("GradientTexture2D_ictn0")
+action = "izquierda"
+
+[node name="ControladorPausa" type="Node" parent="." unique_id=913843190]
 process_mode = 3
 script = ExtResource("8_e307b")
