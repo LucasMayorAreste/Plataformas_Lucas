@@ -8,7 +8,7 @@
 size = Vector2(26, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wky4x"]
-size = Vector2(28, 22)
+size = Vector2(27, 22)
 
 [node name="Personaje" type="CharacterBody2D" unique_id=1796600837 node_paths=PackedStringArray("animacion", "area_2d")]
 collision_layer = 4
@@ -28,8 +28,8 @@ texture_filter = 1
 position = Vector2(-8, -36)
 scale = Vector2(0.25, 0.25)
 sprite_frames = ExtResource("1_jqp8e")
-animation = &"saltar"
-frame_progress = 0.7303097
+animation = &"correr"
+frame_progress = 0.9618072
 
 [node name="Area2D" type="Area2D" parent="." unique_id=865146069]
 collision_layer = 0
@@ -37,5 +37,5 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1805061613]
 visible = false
-position = Vector2(-10, -29)
+position = Vector2(-9.5, -29)
 shape = SubResource("RectangleShape2D_wky4x")

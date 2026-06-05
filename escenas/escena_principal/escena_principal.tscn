@@ -13,6 +13,7 @@
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_asb8d"]
 gradient = SubResource("Gradient_e307b")
+fill_to = Vector2(1, 0.02014652)
 
 [sub_resource type="Gradient" id="Gradient_ictn0"]
 
@@ -54,18 +55,21 @@ grow_vertical = 1
 [node name="TouchScreenButtonSaltar" type="TouchScreenButton" parent="CanvasLayer" unique_id=1445776598]
 modulate = Color(1, 1, 1, 0.23529412)
 position = Vector2(1032, 525)
+scale = Vector2(1.5, 1.5)
 texture_normal = SubResource("GradientTexture2D_asb8d")
 action = "saltar"
 
 [node name="TouchScreenButtonDerecha" type="TouchScreenButton" parent="CanvasLayer" unique_id=1283991284]
 modulate = Color(1, 1, 1, 0.23529412)
 position = Vector2(155, 525)
+scale = Vector2(1.5, 1.5)
 texture_normal = SubResource("GradientTexture2D_pt7cf")
 action = "derecha"
 
 [node name="TouchScreenButtonIzquierda" type="TouchScreenButton" parent="CanvasLayer" unique_id=76668635]
 modulate = Color(1, 1, 1, 0.23529412)
 position = Vector2(29, 525)
+scale = Vector2(1.5, 1.5)
 texture_normal = SubResource("GradientTexture2D_ictn0")
 action = "izquierda"
 
