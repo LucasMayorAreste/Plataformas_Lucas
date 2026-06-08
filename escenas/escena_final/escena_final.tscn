@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dpi6214n0auyo"]
 
-[node name="EscenaFinal" type="Node2D"]
+[ext_resource type="Script" uid="uid://bkvkut0gqgsmx" path="res://escenas/escena_final/escena_final.gd" id="1_0jc1b"]
 
-[node name="Label" type="Label" parent="."]
+[node name="EscenaFinal" type="Node2D" unique_id=1552429320]
+script = ExtResource("1_0jc1b")
+
+[node name="Label" type="Label" parent="." unique_id=625188091]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -15,3 +18,12 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "¡Felicidades! ¡Has ganado!"
+
+[node name="Button" type="Button" parent="." unique_id=1513116101]
+offset_left = -62.0
+offset_top = 32.0
+offset_right = 62.0
+offset_bottom = 73.0
+text = "Volver Menú"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

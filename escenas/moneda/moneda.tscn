@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://nk8qxh5ukg7p"]
+[gd_scene format=3 uid="uid://nk8qxh5ukg7p"]
 
 [ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://sprites/tileset_mazmorra.png" id="1_jyuw3"]
 [ext_resource type="Script" uid="uid://djmxipyqathwy" path="res://escenas/moneda/moneda.gd" id="1_ypcej"]
@@ -11,6 +11,21 @@ region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ml8qm"]
 radius = 8.0
+
+[sub_resource type="Animation" id="Animation_ml8qm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_ypcej"]
 resource_name = "rotar"
@@ -28,49 +43,32 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_ml8qm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y48gn"]
 _data = {
 &"RESET": SubResource("Animation_ml8qm"),
 &"rotar": SubResource("Animation_ypcej")
 }
 
-[node name="Moneda" type="Node2D" node_paths=PackedStringArray("area_2d", "reproductor")]
+[node name="Moneda" type="Node2D" unique_id=2060982580 node_paths=PackedStringArray("area_2d", "reproductor")]
 script = ExtResource("1_ypcej")
 area_2d = NodePath("Area2D")
 reproductor = NodePath("Sprite2D/ReproductorSonidoMoneda")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1611664769]
 texture = SubResource("AtlasTexture_ypcej")
 
-[node name="ReproductorSonidoMoneda" type="AudioStreamPlayer2D" parent="Sprite2D"]
+[node name="ReproductorSonidoMoneda" type="AudioStreamPlayer2D" parent="Sprite2D" unique_id=1144170242]
 stream = ExtResource("3_ml8qm")
 bus = &"SFX"
 script = ExtResource("4_y48gn")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=296557803]
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1182987815]
 shape = SubResource("CircleShape2D_ml8qm")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_y48gn")
-}
-autoplay = "rotar"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=166811059]
+libraries/ = SubResource("AnimationLibrary_y48gn")
+autoplay = &"rotar"

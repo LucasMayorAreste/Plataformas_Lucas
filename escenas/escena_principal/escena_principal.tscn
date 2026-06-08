@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://csyoql15iygaw" path="res://musica/musica.wav" id="5_y7kll"]
 [ext_resource type="PackedScene" uid="uid://dc6cpdwni6fxq" path="res://escenas/controlador_partida/controlador_partida.tscn" id="6_e307b"]
 [ext_resource type="PackedScene" uid="uid://do05mkwxxx06b" path="res://escenas/contador_muertes/contador_muertes.tscn" id="6_px6n3"]
+[ext_resource type="Script" uid="uid://co6sl4mgakive" path="res://escenas/escena_principal/contador_puntos.gd" id="8_asb8d"]
 [ext_resource type="Script" uid="uid://b1sdhesyweg0h" path="res://escenas/escena_principal/controlador_pausa.gd" id="8_e307b"]
 
 [sub_resource type="Gradient" id="Gradient_e307b"]
@@ -61,9 +62,10 @@ action = "saltar"
 
 [node name="TouchScreenButtonDerecha" type="TouchScreenButton" parent="CanvasLayer" unique_id=1283991284]
 modulate = Color(1, 1, 1, 0.23529412)
-position = Vector2(155, 525)
+position = Vector2(189, 523)
 scale = Vector2(1.5, 1.5)
 texture_normal = SubResource("GradientTexture2D_pt7cf")
+passby_press = true
 action = "derecha"
 
 [node name="TouchScreenButtonIzquierda" type="TouchScreenButton" parent="CanvasLayer" unique_id=76668635]
@@ -71,7 +73,16 @@ modulate = Color(1, 1, 1, 0.23529412)
 position = Vector2(29, 525)
 scale = Vector2(1.5, 1.5)
 texture_normal = SubResource("GradientTexture2D_ictn0")
+passby_press = true
 action = "izquierda"
+
+[node name="ContadorPuntos" type="Label" parent="CanvasLayer" unique_id=14839173 groups=["HUD"]]
+offset_left = 1003.0
+offset_top = 6.0
+offset_right = 1043.0
+offset_bottom = 29.0
+text = "Puntos: 0"
+script = ExtResource("8_asb8d")
 
 [node name="ControladorPausa" type="Node" parent="." unique_id=913843190]
 process_mode = 3
