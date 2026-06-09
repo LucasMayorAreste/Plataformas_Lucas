@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cgkdmwf6bdbgt"]
+
+[ext_resource type="Script" uid="uid://lnc33djws70" path="res://escenas/personaje/araña.gd" id="1_0jo74"]
+[ext_resource type="Texture2D" uid="uid://unsdoxk24rlk" path="res://sprites/ArañaParedFinal.png" id="1_60mxe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jo74"]
+size = Vector2(174, 183)
+
+[node name="Araña" type="Area2D" unique_id=1751026051]
+collision_mask = 3
+script = ExtResource("1_0jo74")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1215763363]
+texture = ExtResource("1_60mxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=852142683]
+visible = false
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_0jo74")

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bdojqunsrvdi2" path="res://escenas/personaje/personaje.tscn" id="3_wpukg"]
 [ext_resource type="PackedScene" uid="uid://nk8qxh5ukg7p" path="res://escenas/moneda/moneda.tscn" id="4_dn0x7"]
 [ext_resource type="PackedScene" uid="uid://dmacu6kbko37e" path="res://escenas/contenedor_monedas/contenedor_monedas.tscn" id="4_tifen"]
+[ext_resource type="PackedScene" uid="uid://cgkdmwf6bdbgt" path="res://escenas/personaje/araña.tscn" id="7_5mjar"]
 
 [node name="Nivel1" type="Node2D" unique_id=875368511]
 
@@ -41,3 +42,8 @@ puntos_que_da = 50
 
 [node name="Personaje" parent="." unique_id=640279017 instance=ExtResource("3_wpukg")]
 position = Vector2(-158, 126)
+
+[node name="Araña" parent="." unique_id=1751026051 instance=ExtResource("7_5mjar")]
+position = Vector2(-56, 99)
+scale = Vector2(0.1, 0.1)
+distancia_movimiento = 50.0
