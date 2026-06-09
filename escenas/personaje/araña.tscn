@@ -7,6 +7,7 @@
 size = Vector2(174, 183)
 
 [node name="Araña" type="Area2D" unique_id=1751026051]
+scale = Vector2(0.1, 0.1)
 collision_mask = 3
 script = ExtResource("1_0jo74")
 
