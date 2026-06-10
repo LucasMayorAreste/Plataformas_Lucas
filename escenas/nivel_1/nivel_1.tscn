@@ -45,5 +45,5 @@ position = Vector2(-158, 126)
 
 [node name="Araña" parent="." unique_id=1751026051 instance=ExtResource("7_5mjar")]
 position = Vector2(-56, 99)
-scale = Vector2(0.1, 0.1)
 distancia_movimiento = 50.0
+movimiento_vertical = true
