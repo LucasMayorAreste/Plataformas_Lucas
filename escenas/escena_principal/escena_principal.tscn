@@ -30,7 +30,7 @@ gradient = SubResource("Gradient_asb8d")
 
 [node name="EscenaPrincipal" type="Node2D" unique_id=511570559 node_paths=PackedStringArray("controlador_partida")]
 script = ExtResource("1_snxy5")
-niveles = Array[PackedScene]([ExtResource("6_pt7cf"), ExtResource("1_pdctq"), ExtResource("3_yoxmf"), ExtResource("2_ictn0"), ExtResource("2_sbgap")])
+niveles = Array[PackedScene]([ExtResource("1_pdctq"), ExtResource("3_yoxmf"), ExtResource("2_ictn0"), ExtResource("6_pt7cf"), ExtResource("2_sbgap")])
 controlador_partida = NodePath("ControladorPartida")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1621952414]
